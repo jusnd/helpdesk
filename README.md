@@ -1,8 +1,8 @@
 # HelpDesk
 
-![Build and Deploy](https://github.com/USERNAME/REPOSITORY/actions/workflows/deploy.yml/badge.svg)
+![Build and Deploy](https://github.com/jusnd/helpdesk/actions/workflows/deploy.yml/badge.svg)
 
-**GitHub Pages:** https://USERNAME.github.io/REPOSITORY/
+**GitHub Pages:** https://jusnd.github.io/helpdesk/
 
 Учебный проект к занятию «Работа с HTTP». Реализованы загрузка списка заявок, создание, редактирование, удаление, изменение статуса и отдельная загрузка подробного описания.
 

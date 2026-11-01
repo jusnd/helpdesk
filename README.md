@@ -34,10 +34,10 @@ npm start
 
 ## Публикация
 
-1. Загрузите проект в GitHub-репозиторий.
-2. Опубликуйте папку `backend` на Render как Web Service. Build Command: `npm ci`, Start Command: `npm start`, переменная окружения `NODE_VERSION=20`.
-3. В `frontend/src/js/config.js` замените `http://localhost:7070` на HTTPS-адрес backend.
-4. В настройках GitHub-репозитории выберите Pages → Build and deployment → Source → GitHub Actions.
-5. Замените `USERNAME` и `REPOSITORY` в этом README на свои данные.
+Frontend публикуется на GitHub Pages автоматически после каждого push в ветку `main`. Workflow находится в `.github/workflows/deploy.yml`: он проверяет код линтером, собирает frontend через Webpack и развёртывает содержимое `frontend/dist`.
+
+Адрес приложения: https://jusnd.github.io/helpdesk/
+
+Backend представляет собой отдельный Node.js Web Service. Для production-версии его HTTPS-адрес указывается в `frontend/src/js/config.js`.
 
 > Backend хранит заявки в оперативной памяти. После перезапуска сервера список возвращается к исходному состоянию — так устроен выданный в задании сервер.

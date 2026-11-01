@@ -4,6 +4,8 @@ import bodyParser from "body-parser";
 import * as crypto from "crypto";
 import pino from 'pino';
 import pinoPretty from 'pino-pretty';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const app = express();
 const logger = pino(pinoPretty());
@@ -133,4 +135,11 @@ const bootstrap = async () => {
   }
 };
 
-bootstrap();
+const isDirectRun = process.argv[1]
+  && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+
+if (isDirectRun) {
+  bootstrap();
+}
+
+export default app;

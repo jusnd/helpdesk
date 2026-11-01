@@ -4,11 +4,13 @@
 
 **GitHub Pages:** https://jusnd.github.io/helpdesk/
 
+**Backend API:** https://helpdesk-backend-jusnd.vercel.app
+
 Учебный проект к занятию «Работа с HTTP». Реализованы загрузка списка заявок, создание, редактирование, удаление, изменение статуса и отдельная загрузка подробного описания.
 
 ## Локальный запуск
 
-Нужны Node.js 20 и npm.
+Нужны Node.js 26 и npm.
 
 ### 1. Backend
 
@@ -22,7 +24,7 @@ npm start
 
 ### 2. Frontend
 
-Откройте второй терминал, не останавливая backend:
+Откройте второй терминал, не останавливая backend. Для локальной разработки временно замените `API_URL` в `frontend/src/js/config.js` на `http://localhost:7070`, затем выполните:
 
 ```bash
 cd frontend
@@ -30,7 +32,7 @@ npm ci
 npm start
 ```
 
-Откройте `http://localhost:8080`.
+Откройте `http://localhost:8080`. Не отправляйте локальный адрес в репозиторий: опубликованный сайт должен использовать HTTPS-адрес backend на Vercel.
 
 ## Публикация
 
